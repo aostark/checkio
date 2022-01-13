@@ -1,0 +1,8 @@
+# Check if all elements in the given list are equal. 
+
+from typing import List, Any
+
+def all_the_same(elements):
+    if elements == []:
+        return True
+    return elements.count(elements[0]) == len(elements)
