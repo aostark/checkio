@@ -1,0 +1,22 @@
+# You are given an array of integers. You should find the sum of the integers with even indexes (0th, 2nd, 4th...). 
+# Then multiply this summed number and the final element of the array together. 
+
+def checkio(array):
+    """
+        sums even-indexes elements and multiply at the last
+    """
+    result = 0
+    last_element = 0
+    if len(array) > 0:
+        try:
+            for i in range(len(array)):
+                if not i % 2:
+                    result += array[i]
+        except IndexError:
+            return array
+        answer = result * array[-1]
+
+        return answer
+    else: 
+        return 0 
+        
